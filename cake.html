@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAKE IT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <h1>BAKE IT!!!</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Cakes</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">testimonials</a></li>
+                <li><a href="#cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h2>Indulge in Our Delectable Creations</h2>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At BAKE IT, we believe that every moment deserves a sweet touch. From the first bite of our freshly baked cakes to the last crumb, our passion for quality and creativity shines through. Whether you're celebrating a special occasion or just indulging in a little treat, we have a delightful selection of cakes made with love and the finest ingredients.
+
+            Join us on a delicious journey where every slice tells a story. We can’t wait to share our sweet creations with you!
+        </p>
+    </section>
+<hr>
+    <section id="categories">
+        <h2>Cake Categories</h2>
+        <div class="cake-grid">
+            <div class="cake-card">
+                <a href="birthday.html">
+                    <img src="image.png" width="400px" height="400px" alt="Birthday Cake">
+                    
+                  </a>
+                
+                <h3>Birthday Cakes</h3>
+                <p>Rs 1000</p>
+               <!--- <a href="birthday.html">View Details</a>-->
+            </div>
+            <div class="cake-card">
+                <a href="wedding.html">
+                <img src="image copy.png" width="400" height="400" alt="Wedding Cake"></a>
+                <h3>Wedding Cakes</h3>
+                <p>Rs 3500</p>
+                <!--<a href="wedding.html">View Details</a>-->
+            </div>
+            <div class="cake-card">
+                <a href="custom.html">
+                <img src="customcake.jpg" width="400" height="400" alt="Custom Cake"></a>
+                <h3>Custom Cakes</h3>
+                <p>Rs 2500</p>
+               <!-- <a href="custom.html">View Details</a>-->
+            </div>
+        </div>
+        <p>click on the image for more Information</p>
+    </section>
+<hr>
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <img src="cake1.jpg" width="400" height="400" alt="Cake 1"><br>
+            <img src="cake2.jpg" width="400" height="400" alt="Cake 2"><br>
+            <img src="cake3.jpg" width="400" height="400" alt="Cake 3"><br>
+            <img src="cake4.jpg" width="400" height="400" alt="Cake 4"><br>
+            <p>For more images click on more</p>
+            <a href="more.html">More</a>
+        </div>
+    </section>
+<hr>
+    <section id="testimonials">
+        <h2>Customer Testimonials</h2>
+        <div id="reviews"></div>
+        <form id="review-form">
+            <input type="text" placeholder="Your Name" required>
+            <textarea placeholder="Your Review" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+<hr>
+    <footer>
+        <p>Contact us: bakeit@gmail.com | +91 987654321</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = this[0].value;
+            const review = this[1].value;
+            
+            const reviewsDiv = document.getElementById('reviews');
+            const newReview = document.createElement('div');
+            newReview.innerHTML = `<strong>${name}</strong>: <p>${review}</p>`;
+            reviewsDiv.appendChild(newReview);
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
